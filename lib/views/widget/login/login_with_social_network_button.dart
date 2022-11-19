@@ -24,7 +24,7 @@ class LoginWithSocialNetworkButton extends StatelessWidget {
       height: Dimens.size56,
       width: SizeConfig.screenWidth! * Dimens.size0Dot392,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: press,
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(LoginAppColor.whiteColor),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(

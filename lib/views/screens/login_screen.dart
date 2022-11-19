@@ -216,10 +216,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                         color: LoginAppColor.whiteColor,
                                       ),
                                       press: () async {
-                                        await data.loginUser(
-                                          _email.text,
-                                          _password.text,
-                                        );
+                                        await data.loginUser(_email.text, _password.text);
                                         switch (data.statusAuthentication) {
                                           case ListStatusAuthentication.fail:
                                             Utils.showToast(tr('login_screen.login_fail'));

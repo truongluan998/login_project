@@ -50,6 +50,10 @@ class Dimens {
   static const double opa0Dot3 = 0.3;
   static const double opa0Dot4 = 0.4;
 
+  static const double thickness0Dot5 = 0.5;
+
+  static const int flex1 = 1;
+
   static const double heightProductImage = 0.20337438423;
   static const double heightPlaceholderProductImage = 0.21;
 }

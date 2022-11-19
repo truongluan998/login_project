@@ -16,26 +16,21 @@ class AuthenticationController extends ChangeNotifier {
   bool isShowPass = false;
 
   Future<void> checkUser() async {
-    try {
-      isLoading = true;
-      notifyListeners();
-      await Future.delayed(const Duration(milliseconds: 1000));
-      final user = await _dbBusiness.getUser();
-      if (user != null) {
-        final isValidUser = await _authenticationBusiness.checkUser(user);
-        if (isValidUser) {
-          isLoading = false;
-          statusAuthentication = ListStatusAuthentication.logged;
-          notifyListeners();
-        } else {
-          isLoading = false;
-          notifyListeners();
-        }
+    isLoading = true;
+    notifyListeners();
+    await Future.delayed(const Duration(milliseconds: 1000));
+    final user = await _dbBusiness.getUser();
+    if (user != null) {
+      final isValidUser = await _authenticationBusiness.checkUser(user);
+      if (isValidUser) {
+        isLoading = false;
+        statusAuthentication = ListStatusAuthentication.logged;
+        notifyListeners();
       } else {
         isLoading = false;
         notifyListeners();
       }
-    } catch (_) {
+    } else {
       isLoading = false;
       notifyListeners();
     }

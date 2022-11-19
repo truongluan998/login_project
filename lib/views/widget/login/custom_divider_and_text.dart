@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../config/theme_config.dart';
+import '../../../constants/constants.dart';
 import '../../../theme/login_app_color.dart';
 
 class CustomDividerAndText extends StatelessWidget {
@@ -17,11 +18,11 @@ class CustomDividerAndText extends StatelessWidget {
         const Expanded(
           child: Divider(
             color: LoginAppColor.dividerColor,
-            thickness: 0.5,
+            thickness: Dimens.thickness0Dot5,
           ),
         ),
         Expanded(
-          flex: 1,
+          flex: Dimens.flex1,
           child: Center(
             child: Text(
               title,
@@ -32,7 +33,7 @@ class CustomDividerAndText extends StatelessWidget {
         const Expanded(
           child: Divider(
             color: LoginAppColor.dividerColor,
-            thickness: 0.5,
+            thickness: Dimens.thickness0Dot5,
           ),
         ),
       ],
